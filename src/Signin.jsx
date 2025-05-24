@@ -22,25 +22,15 @@ const Signin = () => {
         <h1 className='font-bold text-2xl'>Signin to your </h1>
         <h1 className='font-bold text-2xl'>PopX account</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-       {/* <form>
-  <fieldset className="border  p-2 rounded-lg">
-    <legend className="text-lg font-semibold">Email</legend>
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter your email"
-      className="w-full border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-      required
-    />
-  </fieldset  > */}
+       
    <form onSubmit={handelLogin}> 
-  <fieldset className='border p-2 rounded-lg '>
-    <legend className='text-purple-500  text-lg font-semibold   '>Email Address
+  <fieldset className='border py-[0.5px] px-4 text-md rounded-lg '>
+    <legend className='text-purple-500   text-md font-semibold   '>Email Address
      </legend>
  <input type='email' name='email' value={email} placeholder='Enter Your Email' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setEmail(e.target.value)}/>
 </fieldset>
-<fieldset className='border p-2 rounded-lg'>
-     <legend className='text-purple-500  text-lg font-semibold   '>Password
+<fieldset className='border py-[0.5px] px-4 rounded-md'>
+     <legend className='text-purple-500  text-md font-semibold   '>Password
      </legend>
  <input type='password' name='password' value={password} placeholder='Enter Your Password' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setPassword(e.target.value)}/>
 

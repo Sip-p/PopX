@@ -26,34 +26,34 @@ navigate('/user')
         <h1 className='font-bold text-2xl'>PopX account</h1>
      <form className='py-4  ' onSubmit={handelCreate}> 
   <fieldset className='border m-1 px-2 py-[0.1px] rounded-lg '>
-    <legend className='text-purple-500  text-lg font-semibold   '>Full Name<span className='text-red-600'>*</span>
+    <legend className='text-purple-500  text-md font-semibold   '>Full Name<span className='text-red-600'>*</span>
      </legend>
- <input type='text' name='email' required value={name} placeholder='Enter Your Fullname' className='w-full p-2   border-white rounded-lg  focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setName(e.target.value)}/>
+ <input type='text' name='name' required value={name} placeholder='Enter Your Fullname' className='w-full p-2   border-white rounded-lg  focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setName(e.target.value)}/>
 </fieldset>
 <fieldset className='border m-1 px-2 py-[0.1px] rounded-lg'>
-     <legend className='text-purple-500  text-lg font-semibold   '>
+     <legend className='text-purple-500  text-md font-semibold   '>
          Phone number<span className='text-red-600'>*</span>
      </legend>
- <input type='number' name='email' value={phone} required placeholder='Enter Your Phone Number' className='w-full p-2   border-none rounded-lg  focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setPhone(e.target.value)}/>
+ <input type='tel' pattern='^\d{10}$' title='Contact number must be exactly 10 digits' name='phone' value={phone} required placeholder='Enter Your Phone Number' className='w-full p-2   border-none rounded-lg  focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setPhone(e.target.value)}/>
 
   </fieldset>
 
     <fieldset className='border m-1 px-2 py-[0.1px] rounded-lg '>
-    <legend className='text-purple-500  text-lg font-semibold   '>Email Address<span className='text-red-600'>*</span>
+    <legend className='text-purple-500  text-md font-semibold   '>Email Address<span className='text-red-600'>*</span>
      </legend>
  <input type='email' name='email' value={email} required placeholder='Enter Your Email' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setEmail(e.target.value)}/>
 </fieldset>
 
   <fieldset className='border m-1 px-2 py-[0.1px] rounded-lg '>
-    <legend className='text-purple-500  text-lg font-semibold   '>Password<span className='text-red-600'>*</span>
+    <legend className='text-purple-500  text-md font-semibold   '>Password<span className='text-red-600'>*</span>
      </legend>
  <input type='password' pattern='^(?=.*[0-9])(?=.*[\w_]).{8,}$' title='Password must be atleast 8 character long ,include atleast one digit & one special character' name='password' value={password} required placeholder='Enter Your Password' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setPassword(e.target.value)}/>
 </fieldset>
 
  <fieldset className='border m-1 px-2 py-[0.1px] rounded-lg '>
-    <legend className='text-purple-500  text-lg font-semibold   '>Company name 
+    <legend className='text-purple-500  text-md font-semibold   '>Company name 
      </legend>
- <input type='text' name='company' value={company} required placeholder='Enter Company name' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setCompany(e.target.value)}/>
+ <input type='text' name='company' value={company}   placeholder='Enter Company name' className='w-full p-2   border-none rounded-lg focus:outline-none focus:border-white focus:ring-0' onChange={(e)=>setCompany(e.target.value)}/>
 </fieldset>
 <h1 className='mt-3 font-semibold m-2'>Are you an Agency?<span className='text-red-600'>*</span></h1>
  <div className='flex gap-3'> 
@@ -61,7 +61,7 @@ navigate('/user')
 <input type='radio' name='agency' required className='accent-purple-800 m-2'/>Yes 
 </label>
  <label> 
-<input type='radio' name='agency' required className='accent-purple-800'/>No
+<input type='radio' name='agency' required className='accent-purple-800 m-2'/>No
 </label>
 </div>
 
